@@ -204,7 +204,7 @@
           \begin{beamercolorbox}[ht=\dimexpr\paperheight-\fau@inner@logoraum-\fau@inner@urlraum,sep=.5\fau@inner@absenderraum]{section page title}
             \vbox to\dimexpr\fau@inner@absenderhoehe-\fau@inner@absenderraum{%
               \vskip.5\fau@inner@absenderraum
-              {\usebeamerfont{title}\thesection~~\insertsection}
+              {\usebeamerfont{title}\thesection~~{\hypersetup{linkcolor=white}\insertsectionhead}}
               \vfil
               \vskip.5\fau@inner@absenderraum
             }
@@ -243,6 +243,16 @@
       \end{beamercolorbox}%
     \end{beamercolorbox}
   }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% SubSection page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginSubsection[]
+{
+	{\hypersetup{linkcolor=faublue}
+		\begin{frame}
+			\frametitle{Outline}
+			\tableofcontents[currentsection,currentsubsection]
+	\end{frame}}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Boxes and lists %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
