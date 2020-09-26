@@ -12,12 +12,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareOptionBeamer{institute}{%
   \PassOptionsToPackage{institute=#1}{styles/beamercolorthemefau}
-  \ifthenelse{\equal{#1}{fau}}{\fau@isfautrue}{\fau@isfaufalse}%
-  \ifthenelse{\equal{#1}{phil}}{\fau@isphiltrue}{\fau@isphilfalse}%
-  \ifthenelse{\equal{#1}{rewi}}{\fau@isrewitrue}{\fau@isrewifalse}%
-  \ifthenelse{\equal{#1}{med}}{\fau@ismedtrue}{\fau@ismedfalse}%
-  \ifthenelse{\equal{#1}{nat}}{\fau@isnattrue}{\fau@isnatfalse}%
-  \ifthenelse{\equal{#1}{tech}}{\fau@istechtrue}{\fau@istechfalse}%
+  \def\inst{}
+  \ifthenelse{\equal{#1}{fau}}{\fau@isfautrue\def\inst{fau}}{\fau@isfaufalse}%
+  \ifthenelse{\equal{#1}{phil}}{\fau@isphiltrue\def\inst{phil}}{\fau@isphilfalse}%
+  \ifthenelse{\equal{#1}{rewi}}{\fau@isrewitrue\def\inst{rewi}}{\fau@isrewifalse}%
+  \ifthenelse{\equal{#1}{med}}{\fau@ismedtrue\def\inst{med}}{\fau@ismedfalse}%
+  \ifthenelse{\equal{#1}{nat}}{\fau@isnattrue\def\inst{nat}}{\fau@isnatfalse}%
+  \ifthenelse{\equal{#1}{tech}}{\fau@istechtrue\def\inst{tech}}{\fau@istechfalse}%
 }
 \DeclareOptionBeamer{variant}{%
   \PassOptionsToPackage{variant=#1}{styles/beamercolorthemefau}
@@ -104,7 +105,10 @@
 \PassOptionsToPackage{outlinestaerke=1pt}{styles/beamerouterthemefau}
 \PassOptionsToPackage{userlogobreite=50mm}{styles/beamerouterthemefau}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\geometry{paperwidth=254mm,paperheight=190.5mm,left=0mm,right=0mm,top=0mm,bottom=0mm}
+\geometry{paperwidth=254mm,paperheight=190.5mm}%left=0mm,right=0mm,top=0mm,bottom=0mm}
+%\setbeamersize{text margin right=0pt, text margin left=0pt, 
+%			   sidebar width left=0pt, sidebar width right=0pt}
+
 \usepackage{styles/beamerfontthemefau}
 \usepackage{styles/beamercolorthemefau}
 \usepackage{styles/beamerinnerthemefau}
