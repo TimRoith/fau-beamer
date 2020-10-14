@@ -5,8 +5,11 @@
 \begin{document}
 % ----------------------------------------------------------------------------------------
 % Titlepage
-% - plain-Option deaktiviert Kopf- und Fusszeile
-\frame[plain]{\titlepage}
+% - lplain erweiter die normale plain Umgebung sodass die linke sidebar tatsaechlich 
+% entfernt wird
+\begin{lplainframe}
+\titlepage
+\end{lplainframe}
 % ----------------------------------------------------------------------------------------
 % Outline
 \begin{frame}{Outline}
@@ -14,5 +17,5 @@
 \end{frame}
 % ----------------------------------------------------------------------------------------
 % Deprecated section, only a resource for content
-\input{sections/01_ExampleSection.tex}
+\input{sections/01_HowTo.tex}
 \end{document}
