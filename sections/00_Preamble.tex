@@ -18,6 +18,7 @@
 % ----------------------------------------------------------------------------------------
 \usepackage{isomath}
 \usefonttheme[onlymath]{serif}
+\usepackage{exscale}
 \setbeamercolor{alerted text}{fg=faunat}
 % ----------------------------------------------------------------------------------------
 % custom commands for symbols
@@ -82,5 +83,6 @@
 % ========================================================================================
 % Various custom commands
 % ----------------------------------------------------------------------------------------
+\pdfsuppresswarningpagegroup=1 %solves the PDF inclusion problem
 % Change color for cite locally
 \newcommand{\colorcite}[3]{{\hypersetup{citecolor=#1}{\cite[#2]{#3}}}} 
