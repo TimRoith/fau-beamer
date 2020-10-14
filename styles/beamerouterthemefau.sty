@@ -71,7 +71,7 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Sidebar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\setbeamersize{sidebar width left=\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke}
+\setbeamersize{sidebar width left=\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke}
 \defbeamertemplate*{sidebar left}{sidebar theme}
 {%
 \begin{beamercolorbox}[wd=\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke,
@@ -152,6 +152,21 @@
       \newline{\usebeamerfont{framesubtitle}\insertframesubtitle}
     \fi
   \end{beamercolorbox}
+}
+% ########################################################################################
+% ########################################################################################
+% Actual plain environment
+% This removes the left sidbar of a plain frame
+% ########################################################################################
+\newenvironment{lplainframe}[1][]{%
+\hoffset=-\beamer@leftsidebar
+\advance\textwidth\beamer@leftsidebar
+\hsize\textwidth
+\columnwidth\textwidth
+%
+\begin{frame}[plain,#1]%
+}{%
+\end{frame}%
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mode<all>
