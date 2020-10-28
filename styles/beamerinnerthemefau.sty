@@ -107,10 +107,12 @@
 	\hbox to \dimexpr\paperwidth-2\fau@inner@absenderraum{
 		\hskip .5\fau@inner@absenderraum
 		{\usebeamerfont{title}\inserttitle}
+		\hfill}%
+	\hbox to \dimexpr\paperwidth-2\fau@inner@absenderraum{
+		\hskip .5\fau@inner@absenderraum
 		\ifx\insertsubtitle\empty\else
-			\vskip.5\fau@inner@absenderraum
 			{\usebeamerfont{subtitle}\insertsubtitle}
-		\fi\hfill}
+		\fi\hfill}%
 	\vfil%
 	\hbox to \dimexpr\paperwidth-2\fau@inner@absenderraum{
 		\hskip .5\fau@inner@absenderraum
