@@ -40,8 +40,8 @@
 %%% Headline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{headline}{%
 \begin{beamercolorbox}[wd=\paperwidth,
-					   ht=\dimexpr\fau@outer@logoraum, dp=0ex]{headline}
-\vbox to\dimexpr\fau@outer@logoraum-\fau@outer@outlinestaerke{%
+					   ht=\dimexpr\fau@outer@logoraum+\fau@outer@linienstaerke, dp=0ex]{headline}
+\vbox to\fau@outer@logoraum{%
 \iffau@isuserlogo
 	\vskip\fau@outer@standy
 	\hskip\dimexpr\fau@outer@urlraum+\fau@outer@linienstaerke
@@ -59,9 +59,8 @@
 	\hskip\fau@outer@standx
 \fi
 \includegraphics[width=\fau@outer@logobreite,height=\fau@outer@logohoehe]{\fau@outer@logo}%
-\vfil%
+\vfil
 }%
-%
 
 \hskip\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke-\fau@outer@outlinestaerke%
 \begin{beamercolorbox}[wd=\dimexpr\paperwidth-\fau@outer@absenderraum-
@@ -76,17 +75,17 @@
 \defbeamertemplate*{sidebar left}{sidebar theme}
 {%
 \begin{beamercolorbox}[wd=\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke,
-					   ht=\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum, 
+					   ht=\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum-
+					   			  \fau@outer@linienstaerke-\fau@outer@outlinestaerke, 
 					   dp=0pt]{sidebar outer}%
 \begin{beamercolorbox}[wd=\dimexpr\fau@outer@absenderraum+
-						  \fau@outer@linienstaerke-\fau@outer@outlinestaerke,
-				       ht=\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum, dp=0pt]{sidebar}
-%\vskip\fau@outer@absenderskip
+						  \fau@outer@linienstaerke-\fau@outer@outlinestaerke]{sidebar}
+\vskip\fau@outer@absenderskip
 \vbox to\dimexpr2\fau@outer@absenderhoehe+\fau@outer@linienstaerke{%
-\begin{beamercolorbox}[wd=\fau@outer@absenderraum,ht=\dimexpr\fau@outer@absenderhoehe,dp=0pt]{sidebar top}
+\begin{beamercolorbox}[wd=\fau@outer@absenderraum,ht=\fau@outer@absenderhoehe,dp=0pt]{sidebar top}
 \end{beamercolorbox}%
 \nointerlineskip%
-\vskip\fau@outer@linienstaerke%
+\vskip\fau@outer@linienstaerke
 \iffau@isfau
 	\begin{tikzpicture}
 	\fill[fauphil] (0,0.8\fau@outer@absenderhoehe) rectangle (\fau@outer@absenderraum, 1.0\fau@outer@absenderhoehe);
@@ -100,10 +99,11 @@
 	\end{beamercolorbox}%
 \fi
 }%
-\vskip\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum-2\fau@outer@absenderhoehe-\fau@outer@linienstaerke%
+\vskip\dimexpr\paperheight-\fau@outer@logoraum-
+	   \fau@outer@absenderskip-\fau@outer@urlraum-2\fau@outer@absenderhoehe
 \end{beamercolorbox}%
 \begin{beamercolorbox}[wd=\fau@outer@outlinestaerke,
-					   ht=\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum]{outline}%
+					   ht=\dimexpr\paperheight-\fau@outer@logoraum-\fau@outer@urlraum]{outline}
 \end{beamercolorbox}%
 \end{beamercolorbox}%
 }
@@ -111,35 +111,41 @@
 %%% Footline %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{footline}
 {%
-\begin{beamercolorbox}[wd=\dimexpr\paperwidth,ht=\fau@outer@urlraum]{}%
-\hbox to \paperwidth{%
 \hskip\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke-\fau@outer@outlinestaerke%
-\vbox to \fau@outer@urlraum{%
-\begin{beamercolorbox}[wd=\dimexpr\paperwidth-\fau@outer@absenderraum-\fau@outer@linienstaerke+\fau@outer@outlinestaerke, 
-  					   ht=\fau@outer@outlinestaerke,dp=0pt]{outline}%
+\begin{beamercolorbox}[wd=\dimexpr\paperwidth-\fau@outer@absenderraum-
+  						  \fau@outer@linienstaerke+\fau@outer@outlinestaerke, 
+  						  ht=\fau@outer@outlinestaerke, right]{outline}
+\end{beamercolorbox}
+%
+\begin{beamercolorbox}[wd=\paperwidth,ht=\dimexpr\fau@outer@urlraum-2mm, dp=2mm]{footline}
+\hskip\dimexpr\fau@outer@absenderraum+\fau@outer@linienstaerke%
+\begin{beamercolorbox}[wd=170mm]{footline title}
+\ifx\insertshortauthor\empty\else
+	\insertshortauthor\quad$\cdot$\quad
+\fi
+\ifx\insertshortinstitute\empty\else
+	\insertshortinstitute\quad$\cdot$\quad
+\fi
+\ifx\insertshorttitle\empty\else
+	\insertshorttitle
+\fi
 \end{beamercolorbox}%
-\nointerlineskip%
-\begin{beamercolorbox}[wd=\dimexpr\paperwidth-\fau@outer@absenderraum-\fau@outer@linienstaerke+\fau@outer@outlinestaerke,
-  					   ht=\dimexpr\fau@outer@urlraum-\fau@outer@outlinestaerke, dp=0pt,sep = \dimexpr2\fau@outer@linienstaerke]{footline}%
-\ifx\insertshortauthor\empty\else%
-	\insertshortauthor\quad$\cdot$\quad%
-\fi%
-\ifx\insertshortinstitute\empty\else%
-	\insertshortinstitute\quad$\cdot$\quad%
-\fi%
-\ifx\insertshorttitle\empty\else%
-	\insertshorttitle%
-\fi%
+\begin{beamercolorbox}[wd=30mm]{footline date}
+\ifx\insertshortdate\empty\else        
+	\insertshortdate
+\fi
 \end{beamercolorbox}%
-}%
-}%
+\hfill
+\begin{beamercolorbox}[wd=20mm, right, rightskip=5.5mm]{footline page}
+\insertframenumber/\inserttotalframenumber
 \end{beamercolorbox}%
-}%
+\end{beamercolorbox}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Frametitle %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{frametitle}
 {%
-  \vskip\dimexpr0.5\fau@outer@absenderraum
+  \vskip\dimexpr\fau@outer@absenderraum-3\fau@outer@linienstaerke
   \begin{beamercolorbox}{frametitle}
     \insertframetitle
     \ifx\insertframesubtitle\empty\else

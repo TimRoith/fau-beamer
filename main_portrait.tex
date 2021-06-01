@@ -1,0 +1,100 @@
+\documentclass[final,12pt]{beamer}
+% ========================================================================================
+% Theme: inner, outer, font and colors
+% ----------------------------------------------------------------------------------------
+\usepackage[institute=nat,
+            logo=art/FAU-DMM-Logo-rgb-10cm,
+			size=a0,
+			signature={your.name@fau.de},
+			variant=fond1]{styles/beamerthemefau-portrait}
+% ----------------------------------------------------------------------------------------
+% Input and output encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+% ----------------------------------------------------------------------------------------
+% Language settings
+\usepackage[english]{babel}
+% ========================================================================================
+% Fonts
+% - Helvet is loaded by styles/beamerfonts
+% - We use serif for math environements
+% - isomath is used for upGreek letters
+% ----------------------------------------------------------------------------------------
+\usepackage{isomath}
+\usefonttheme[onlymath]{serif}
+\usepackage{exscale}
+\setbeamercolor{alerted text}{fg=faunat}
+% ----------------------------------------------------------------------------------------
+% custom commands for symbols
+%\usepackage{styles/symbols}
+% ========================================================================================
+% Setup for Titlepage
+% ----------------------------------------------------------------------------------------
+\title[Short title]{Title}
+\subtitle{Subtitle}
+\author[Your Name]{Your Name}
+\institute[AM FAU]{Applied Mathematics, FAU Erlangen--Nürnberg}
+\date{\today}
+% ========================================================================================
+% Bibliography
+% ----------------------------------------------------------------------------------------
+\usepackage{csquotes}
+\usepackage[style=alphabetic, %alternatively: numeric, numeric-comp, and other from biblatex
+			defernumbers=true,
+			useprefix=true,%
+			giveninits=true,%
+			hyperref=true,%
+			autocite=inline,%
+			maxcitenames=5,%
+			maxbibnames=20,%
+			uniquename=init,%
+			sortcites=true,% sort citations when multiple entries are passed to one cite command
+			sorting=ydnt,
+			doi=false,%
+			isbn=false,%
+			url=false,%
+			eprint=true,%
+			backend=biber%
+		   ]{biblatex}
+%\addbibresource{references.bib}
+%\setbeamertemplate{bibliography item}[text]
+% ========================================================================================
+% Hyperref and setup
+% ----------------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	final=true, 
+	plainpages=false,
+	pdfstartview=FitV,
+	pdftoolbar=true,
+	pdfmenubar=true,
+	pdfencoding=auto,
+	psdextra,
+	bookmarksopen=true,
+	bookmarksnumbered=true,
+	breaklinks=true,
+	linktocpage=true,
+	urlcolor=faunat,
+	citecolor=faublue,
+	linkcolor=faunat
+}
+% ========================================================================================
+% Additional packages
+% ----------------------------------------------------------------------------------------
+% tikz
+%
+% ========================================================================================
+% Various custom commands
+% ----------------------------------------------------------------------------------------
+\pdfsuppresswarningpagegroup=1 %solves the PDF inclusion problem
+% ========================================================================================
+% Main document
+% ----------------------------------------------------------------------------------------
+\begin{document}
+% ========================================================================================
+\begin{frame}[t]{-}{}
+Lol
+\end{frame}
+% ========================================================================================
+\end{document}
