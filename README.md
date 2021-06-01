@@ -1,15 +1,19 @@
 # 🖥️ fau-beamer
-Latex Beamer template in accordance to the FAU corporate design manual [[1]](#1). 
+Latex Beamer template in accordance with the FAU corporate design manual [[1]](#1). 
 
-# Usage
+## Usage
+### ⛰️ Landscape
+### 🎴 Potrait
+### 🎨 Colors
 
-# 💡 Implemenatation Notes
-## 📏 Important Measurments
+## 💡 Implemenatation Notes
+### 📏 Important Measurments
 
 
-# 🍺 Credit
+## 🍺 Credit
 This is based off the original code by Balthasar Reuter (@reuterbal) [[2]](#2).
 
-# 🔖 References
+## 🔖 References
 <a id="1">[1]</a> https://www.intern.fau.de/kommunikation-marketing-und-corporate-identity/corporate-identity/
+
 <a id="2">[2]</a> https://en.www.math.fau.de/angewandte-mathematik-1/mitarbeiter/m-sc-balthasar-reuter/latex-templates/
