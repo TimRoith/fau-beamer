@@ -3,7 +3,12 @@ Latex Beamer template in accordance with the FAU corporate design manual [[1]](#
 
 ## Usage
 ### ⛰️ Landscape
-<img src="https://user-images.githubusercontent.com/44805883/120475120-43d73a00-c3a9-11eb-8729-370bba1467e3.png" width="500">
+
+Title page | Section page
+:-------------------------:|:-------------------------:
+<img src="https://user-images.githubusercontent.com/44805883/120496638-04671880-c3be-11eb-88cf-540f4f82bd71.png" width="400"> | <img src="https://user-images.githubusercontent.com/44805883/120496028-83a81c80-c3bd-11eb-9737-df6cc79760a9.png" width="400">
+Frame | 
+<img src="https://user-images.githubusercontent.com/44805883/120497228-848d7e00-c3be-11eb-808b-8a3ffb92ee63.png" width="400"> |
 
 ### 🎴 Potrait
 ### 🎨 Colors
