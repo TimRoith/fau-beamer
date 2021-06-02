@@ -1,5 +1,8 @@
 # 🖥️ fau-beamer
-Latex Beamer template in accordance with the FAU corporate design manual [[1]](#1). 
+
+<img src="https://user-images.githubusercontent.com/44805883/120507652-49dc1380-c3c7-11eb-9ae0-661f8fcb95c9.png" width="600">
+
+Latex Beamer template in accordance with the FAU corporate design manual [[1]](#1).
 
 ## Usage
 The two example files ```main_landscape.tex``` and ```main_portrait.tex``` showcase the usage of the template. 
