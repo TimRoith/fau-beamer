@@ -3,6 +3,8 @@ Latex Beamer template in accordance with the FAU corporate design manual [[1]](#
 
 ## Usage
 ### ⛰️ Landscape
+<img src="https://user-images.githubusercontent.com/44805883/120475120-43d73a00-c3a9-11eb-8729-370bba1467e3.png" width="500">
+
 ### 🎴 Potrait
 ### 🎨 Colors
 
