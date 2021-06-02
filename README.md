@@ -2,7 +2,17 @@
 Latex Beamer template in accordance with the FAU corporate design manual [[1]](#1). 
 
 ## Usage
+The two example files ```main_landscape.tex``` and ```main_portrait.tex``` showcase the usage of the template. 
+You can edit and costumize the preamble therin for your own project. Within the document you can use 
+the regular commands of the ```beamer``` class.
 ### ⛰️ Landscape
+Usually presentations are designed in landscape mode which is available in 4-3 and 16-9 ratio. We can employ this 
+template by loading the corresponding style files, i.e.,
+
+* ```\usepackage{styles/beamerthemefau-4-3}```,
+* ```\usepackage{styles/beamerthemefau-16-9}```.
+
+Displayed below are some samples from this mode.
 
 Title page | Section page
 :-------------------------:|:-------------------------:
@@ -14,11 +24,12 @@ Frame |
 ### 🎨 Colors
 
 ## 💡 Implementation Notes
+If you find errors or want to change something under the hood, you may find the following notes useful.
 ### 📏 Important Measurments
 
 
 ## 🍺 Credit
-This is based off the original code by Balthasar Reuter (@reuterbal) [[2]](#2).
+A big part of this template is based off the original code by Balthasar Reuter (@reuterbal) [[2]](#2).
 
 ## 🔖 References
 <a id="1">[1]</a> https://www.intern.fau.de/kommunikation-marketing-und-corporate-identity/corporate-identity/
