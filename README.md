@@ -6,7 +6,7 @@ Latex Beamer template in accordance with the FAU corporate design manual [[1]](#
 ### 🎴 Potrait
 ### 🎨 Colors
 
-## 💡 Implemenatation Notes
+## 💡 Implementation Notes
 ### 📏 Important Measurments
 
 
