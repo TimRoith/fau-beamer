@@ -23,7 +23,12 @@ Title page | Section page
 Frame | 
 <img src="https://user-images.githubusercontent.com/44805883/120497228-848d7e00-c3be-11eb-808b-8a3ffb92ee63.png" width="400"> |
 
-### 🎴 Potrait
+### 🎴 Portrait
+The portrait mode is mostly used for posters and can is available via the style file ```\usepackage{styles/beamerthemefau-portrait}```. 
+Displayed below is an example poster.
+
+<img src="https://user-images.githubusercontent.com/44805883/120508463-08983380-c3c8-11eb-8012-2656be48c44b.png" width="400">
+
 ### 🎨 Colors
 
 ## 💡 Implementation Notes
