@@ -33,7 +33,7 @@ Displayed below is an example poster.
 
 ## 💡 Implementation Notes
 If you find errors or want to change something under the hood, you may find the following notes useful.
-### 📏 Important Measurments
+### 📏 Important Measurements
 
 
 ## 🍺 Credit
